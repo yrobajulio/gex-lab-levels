@@ -100,6 +100,7 @@ def calcular_niveles(ticker_symbol):
         ticker = yf.Ticker(ticker_symbol)
         spot   = ticker.fast_info['last_price']
         if not ticker.options:
+            print(f"{ticker_symbol}: sin opciones disponibles")
             return None
         config       = get_config(ticker_symbol, spot)
         hoy          = date.today().strftime('%Y-%m-%d')
@@ -107,14 +108,31 @@ def calcular_niveles(ticker_symbol):
         niveles      = calcular_para_config(ticker, spot, expiraciones, config['rango'])
         if not niveles:
             return None
-        return {'ticker': ticker_symbol, 'spot': round(float(spot), 2), 'timestamp': hoy, 'niveles': niveles}
+        return {
+            'ticker':    ticker_symbol,
+            'spot':      round(float(spot), 2),
+            'timestamp': hoy,
+            'niveles':   niveles
+        }
     except Exception as e:
         print(f"Error con {ticker_symbol}: {e}")
         return None
 
 def generar_pine_script(ticker_symbol, niveles):
-    n = niveles
-    return f"//@version=5\nindicator(\'GEX Levels - {ticker_symbol}\', overlay=true)\nhline({n[\'ceiling\']}, \'Ceiling\', color.new(color.green, 0), linewidth=2)\nhline({n[\'mid_high\']}, \'Mid High\', color.new(color.yellow, 0), linewidth=1)\nhline({n[\'pivot\']}, \'Pivot\', color.new(color.white, 0), linewidth=2)\nhline({n[\'mid_low\']}, \'Mid Low\', color.new(color.yellow, 0), linewidth=1)\nhline({n[\'floor\']}, \'Floor\', color.new(color.red, 0), linewidth=2)"
+    ceiling  = niveles['ceiling']
+    mid_high = niveles['mid_high']
+    pivot    = niveles['pivot']
+    mid_low  = niveles['mid_low']
+    floor    = niveles['floor']
+    return (
+        f'//@version=5\n'
+        f'indicator("GEX Levels - {ticker_symbol}", overlay=true)\n'
+        f'hline({ceiling},  "Ceiling",  color.new(color.green,  0), linewidth=2)\n'
+        f'hline({mid_high}, "Mid High", color.new(color.yellow, 0), linewidth=1)\n'
+        f'hline({pivot},    "Pivot",    color.new(color.white,  0), linewidth=2)\n'
+        f'hline({mid_low},  "Mid Low",  color.new(color.yellow, 0), linewidth=1)\n'
+        f'hline({floor},    "Floor",    color.new(color.red,    0), linewidth=2)'
+    )
 
 if __name__ == '__main__':
     resultados = []
