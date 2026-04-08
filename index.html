@@ -11,18 +11,18 @@
   header h1 { font-size: 20px; font-weight: 600; color: #58a6ff; }
   header span { font-size: 12px; color: #8b949e; background: #21262d; padding: 2px 8px; border-radius: 12px; }
   .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
-  .search-bar { display: flex; gap: 12px; margin-bottom: 32px; }
-  .search-bar input { flex: 1; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 16px; color: #e6edf3; font-size: 15px; outline: none; }
+  .search-bar { display: flex; gap: 12px; margin-bottom: 24px; }
+  .search-bar input { flex: 1; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 10px 16px; color: #e6edf3; font-size: 15px; outline: none; text-transform: uppercase; }
   .search-bar input:focus { border-color: #58a6ff; }
-  .search-bar button { background: #238636; border: none; border-radius: 8px; padding: 10px 20px; color: white; font-size: 15px; cursor: pointer; font-weight: 600; }
+  .search-bar button { background: #238636; border: none; border-radius: 8px; padding: 10px 20px; color: white; font-size: 15px; cursor: pointer; font-weight: 600; min-width: 100px; }
   .search-bar button:hover { background: #2ea043; }
+  .search-bar button:disabled { background: #21262d; color: #8b949e; cursor: not-allowed; }
   .quick-tickers { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
   .quick-tickers button { background: #21262d; border: 1px solid #30363d; border-radius: 6px; padding: 6px 14px; color: #8b949e; font-size: 13px; cursor: pointer; }
   .quick-tickers button:hover { border-color: #58a6ff; color: #58a6ff; }
   .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
   .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
   .card-header h2 { font-size: 22px; font-weight: 700; }
-  .card-header .meta { font-size: 13px; color: #8b949e; }
   .levels { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
   .level-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-radius: 8px; }
   .level-ceiling { background: rgba(46,160,67,0.15); border-left: 3px solid #2ea043; }
@@ -33,33 +33,36 @@
   .level-value { font-size: 18px; font-weight: 700; }
   .spot-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; margin-bottom: 8px; background: #21262d; border-radius: 8px; }
   .spot-label { font-size: 12px; color: #8b949e; }
-  .spot-value { font-size: 15px; font-weight: 600; color: #e6edf3; }
+  .spot-value { font-size: 15px; font-weight: 600; }
   .oi-row { display: flex; gap: 16px; margin-bottom: 20px; }
   .oi-box { flex: 1; background: #21262d; border-radius: 8px; padding: 10px 14px; }
   .oi-label { font-size: 11px; color: #8b949e; margin-bottom: 4px; }
   .oi-value { font-size: 14px; font-weight: 600; }
   .oi-calls { color: #2ea043; }
   .oi-puts { color: #f85149; }
-  .pine-section { margin-top: 16px; }
   .pine-section label { font-size: 12px; color: #8b949e; display: block; margin-bottom: 6px; }
   .pine-box { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 12px; font-family: monospace; font-size: 12px; color: #7ee787; line-height: 1.5; white-space: pre; overflow-x: auto; }
   .copy-btn { margin-top: 8px; background: #21262d; border: 1px solid #30363d; border-radius: 6px; padding: 6px 14px; color: #8b949e; font-size: 12px; cursor: pointer; }
   .copy-btn:hover { border-color: #58a6ff; color: #58a6ff; }
   .timestamp { font-size: 11px; color: #8b949e; margin-top: 4px; }
   .loading { text-align: center; padding: 40px; color: #8b949e; }
+  .spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #30363d; border-top-color: #58a6ff; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle; }
+  @keyframes spin { to { transform: rotate(360deg); } }
   .error { background: rgba(248,81,73,0.1); border: 1px solid #f85149; border-radius: 8px; padding: 16px; color: #f85149; margin-bottom: 16px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+  .live-badge { font-size: 11px; background: rgba(46,160,67,0.2); color: #2ea043; border: 1px solid #2ea043; padding: 2px 8px; border-radius: 12px; }
 </style>
 </head>
 <body>
 <header>
   <h1>⚗️ GEX Lab Levels</h1>
   <span>Options Structure Analysis</span>
+  <span class="live-badge">● LIVE</span>
 </header>
 <div class="container">
   <div class="search-bar">
-    <input type="text" id="tickerInput" placeholder="Enter ticker (e.g. TSLA, SOFI, AMD)" />
-    <button onclick="searchTicker()">Analyze</button>
+    <input type="text" id="tickerInput" placeholder="Enter any ticker (e.g. TSLA, PYPL, CRWD)" />
+    <button id="analyzeBtn" onclick="searchTicker()">Analyze</button>
   </div>
   <div class="quick-tickers">
     <span style="font-size:12px;color:#8b949e;align-self:center">Quick:</span>
@@ -81,16 +84,17 @@
 </div>
 
 <script>
+const BACKEND = 'https://gex-lab-levels.onrender.com';
 let allData = [];
 
 async function loadData() {
   try {
     const res = await fetch('data/levels.json?t=' + Date.now());
-    if (!res.ok) throw new Error('No data yet');
+    if (!res.ok) throw new Error('No data');
     allData = await res.json();
     renderAll();
   } catch(e) {
-    document.getElementById('allLevels').innerHTML = '<p style="color:#8b949e;font-size:13px">Run the GitHub Action to generate levels data.</p>';
+    document.getElementById('allLevels').innerHTML = '<p style="color:#8b949e;font-size:13px">Loading cached data...</p>';
   }
 }
 
@@ -100,73 +104,44 @@ function formatNumber(n) {
   return n;
 }
 
+function generatePine(ticker, n) {
+  return '//@version=5\n' +
+    'indicator("GEX Levels - ' + ticker + '", overlay=true)\n' +
+    'hline(' + n.ceiling + ', "Ceiling", color.new(color.green, 0), linewidth=2)\n' +
+    'hline(' + n.mid_high + ', "Mid High", color.new(color.yellow, 0), linewidth=1)\n' +
+    'hline(' + n.pivot + ', "Pivot", color.new(color.white, 0), linewidth=2)\n' +
+    'hline(' + n.mid_low + ', "Mid Low", color.new(color.yellow, 0), linewidth=1)\n' +
+    'hline(' + n.floor + ', "Floor", color.new(color.red, 0), linewidth=2)';
+}
+
 function renderCard(d) {
   const n = d.niveles;
   const spot = d.spot;
-  const aboveFloor = spot > n.floor;
-  const abovePivot = spot > n.pivot;
-  const bias = abovePivot ? '<span style="color:#2ea043">▲ Bullish</span>' : '<span style="color:#f85149">▼ Bearish</span>';
-  return `
-  <div class="card">
-    <div class="card-header">
-      <h2>${d.ticker}</h2>
-      <div style="text-align:right">
-        <div>${bias}</div>
-        <div class="timestamp">Updated: ${d.timestamp}</div>
-      </div>
-    </div>
-    <div class="spot-row">
-      <span class="spot-label">Current Price</span>
-      <span class="spot-value">$${spot}</span>
-    </div>
-    <div class="levels">
-      <div class="level-row level-ceiling">
-        <span class="level-name">Ceiling</span>
-        <span class="level-value" style="color:#2ea043">$${n.ceiling}</span>
-      </div>
-      <div class="level-row level-mid">
-        <span class="level-name">Mid High</span>
-        <span class="level-value" style="color:#d4a017">$${n.mid_high}</span>
-      </div>
-      <div class="level-row level-pivot">
-        <span class="level-name">Pivot</span>
-        <span class="level-value" style="color:#58a6ff">$${n.pivot}</span>
-      </div>
-      <div class="level-row level-mid">
-        <span class="level-name">Mid Low</span>
-        <span class="level-value" style="color:#d4a017">$${n.mid_low}</span>
-      </div>
-      <div class="level-row level-floor">
-        <span class="level-name">Floor</span>
-        <span class="level-value" style="color:#f85149">$${n.floor}</span>
-      </div>
-    </div>
-    <div class="oi-row">
-      <div class="oi-box">
-        <div class="oi-label">OI Calls</div>
-        <div class="oi-value oi-calls">${formatNumber(n.oi_calls)}</div>
-      </div>
-      <div class="oi-box">
-        <div class="oi-label">OI Puts</div>
-        <div class="oi-value oi-puts">${formatNumber(n.oi_puts)}</div>
-      </div>
-    </div>
-    <div class="pine-section">
-      <label>Pine Script — copy to TradingView</label>
-      <div class="pine-box" id="pine-${d.ticker}">${d.pine_script || generatePine(d.ticker, n)}</div>
-      <button class="copy-btn" onclick="copyPine('${d.ticker}')">Copy Pine Script</button>
-    </div>
-  </div>`;
-}
-
-function generatePine(ticker, n) {
-  return `//@version=5
-indicator("GEX Levels - ${ticker}", overlay=true)
-hline(${n.ceiling},  "Ceiling",  color.new(color.green,  0), linewidth=2)
-hline(${n.mid_high}, "Mid High", color.new(color.yellow, 0), linewidth=1)
-hline(${n.pivot},    "Pivot",    color.new(color.white,  0), linewidth=2)
-hline(${n.mid_low},  "Mid Low",  color.new(color.yellow, 0), linewidth=1)
-hline(${n.floor},    "Floor",    color.new(color.red,    0), linewidth=2)`;
+  const bias = spot > n.pivot
+    ? '<span style="color:#2ea043">▲ Bullish</span>'
+    : '<span style="color:#f85149">▼ Bearish</span>';
+  const pine = d.pine_script || generatePine(d.ticker, n);
+  const pineDisplay = pine.replace(/\\n/g, '\n');
+  return '<div class="card">' +
+    '<div class="card-header"><h2>' + d.ticker + '</h2>' +
+    '<div style="text-align:right">' + bias +
+    '<div class="timestamp">Updated: ' + d.timestamp + '</div></div></div>' +
+    '<div class="spot-row"><span class="spot-label">Current Price</span><span class="spot-value">$' + spot + '</span></div>' +
+    '<div class="levels">' +
+    '<div class="level-row level-ceiling"><span class="level-name">Ceiling</span><span class="level-value" style="color:#2ea043">$' + n.ceiling + '</span></div>' +
+    '<div class="level-row level-mid"><span class="level-name">Mid High</span><span class="level-value" style="color:#d4a017">$' + n.mid_high + '</span></div>' +
+    '<div class="level-row level-pivot"><span class="level-name">Pivot</span><span class="level-value" style="color:#58a6ff">$' + n.pivot + '</span></div>' +
+    '<div class="level-row level-mid"><span class="level-name">Mid Low</span><span class="level-value" style="color:#d4a017">$' + n.mid_low + '</span></div>' +
+    '<div class="level-row level-floor"><span class="level-name">Floor</span><span class="level-value" style="color:#f85149">$' + n.floor + '</span></div>' +
+    '</div>' +
+    '<div class="oi-row">' +
+    '<div class="oi-box"><div class="oi-label">OI Calls</div><div class="oi-value oi-calls">' + formatNumber(n.oi_calls) + '</div></div>' +
+    '<div class="oi-box"><div class="oi-label">OI Puts</div><div class="oi-value oi-puts">' + formatNumber(n.oi_puts) + '</div></div>' +
+    '</div>' +
+    '<div class="pine-section"><label>Pine Script — copy to TradingView</label>' +
+    '<div class="pine-box" id="pine-' + d.ticker + '">' + pineDisplay + '</div>' +
+    '<button class="copy-btn" onclick="copyPine('' + d.ticker + '')">Copy Pine Script</button>' +
+    '</div></div>';
 }
 
 function copyPine(ticker) {
@@ -176,8 +151,7 @@ function copyPine(ticker) {
 }
 
 function renderAll() {
-  const container = document.getElementById('allLevels');
-  container.innerHTML = allData.map(renderCard).join('');
+  document.getElementById('allLevels').innerHTML = allData.map(renderCard).join('');
 }
 
 function loadTicker(t) {
@@ -185,16 +159,29 @@ function loadTicker(t) {
   searchTicker();
 }
 
-function searchTicker() {
+async function searchTicker() {
   const t = document.getElementById('tickerInput').value.trim().toUpperCase();
   if (!t) return;
-  const found = allData.find(d => d.ticker === t);
+  const btn = document.getElementById('analyzeBtn');
   const output = document.getElementById('output');
-  if (found) {
-    output.innerHTML = renderCard(found);
-  } else {
-    output.innerHTML = `<div class="error">"${t}" not found in current data. Run the GitHub Action to add new tickers, or check the ticker symbol.</div>`;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Analyzing...';
+  output.innerHTML = '<div class="loading"><span class="spinner"></span>Fetching live data for ' + t + '...</div>';
+  try {
+    const res = await fetch(BACKEND + '/levels/' + t);
+    const data = await res.json();
+    if (data.error) {
+      output.innerHTML = '<div class="error">' + data.error + '</div>';
+    } else {
+      output.innerHTML = renderCard(data);
+      allData = allData.filter(d => d.ticker !== t);
+      allData.unshift(data);
+    }
+  } catch(e) {
+    output.innerHTML = '<div class="error">Error connecting to backend. Try again in a moment.</div>';
   }
+  btn.disabled = false;
+  btn.innerHTML = 'Analyze';
 }
 
 document.getElementById('tickerInput').addEventListener('keydown', e => {
