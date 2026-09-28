@@ -1,287 +1,287 @@
 [
   {
     "ticker": "AAPL",
-    "spot": 339.98,
-    "timestamp": "2026-09-25",
+    "spot": 338.4,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 340.0,
-      "mid_high": 336.25,
-      "pivot": 332.5,
-      "mid_low": 331.25,
+      "ceiling": 342.5,
+      "mid_high": 340.0,
+      "pivot": 337.5,
+      "mid_low": 333.75,
       "floor": 330.0,
-      "oi_calls": 308592,
-      "oi_puts": 216110
+      "oi_calls": 177588,
+      "oi_puts": 129155
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - AAPL\", overlay=true)\nhline(340.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(336.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(332.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(331.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(330.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - AAPL\", overlay=true)\nhline(342.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(340.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(337.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(333.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(330.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "MSFT",
-    "spot": 517.86,
-    "timestamp": "2026-09-25",
+    "spot": 509.22,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 520.0,
-      "mid_high": 508.75,
-      "pivot": 497.5,
-      "mid_low": 493.75,
+      "ceiling": 510.0,
+      "mid_high": 501.25,
+      "pivot": 492.5,
+      "mid_low": 491.25,
       "floor": 490.0,
-      "oi_calls": 224753,
-      "oi_puts": 105911
+      "oi_calls": 158522,
+      "oi_puts": 71157
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - MSFT\", overlay=true)\nhline(520.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(508.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(497.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(493.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(490.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - MSFT\", overlay=true)\nhline(510.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(501.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(492.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(491.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(490.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "NVDA",
-    "spot": 225.16,
-    "timestamp": "2026-09-25",
+    "spot": 228.86,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 227.5,
-      "mid_high": 225.0,
+      "ceiling": 230.0,
+      "mid_high": 226.25,
       "pivot": 222.5,
-      "mid_low": 222.5,
-      "floor": 222.5,
-      "oi_calls": 927068,
-      "oi_puts": 705345
+      "mid_low": 218.75,
+      "floor": 215.0,
+      "oi_calls": 559592,
+      "oi_puts": 467413
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - NVDA\", overlay=true)\nhline(227.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(225.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(222.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(222.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(222.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - NVDA\", overlay=true)\nhline(230.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(226.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(222.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(218.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(215.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "TSLA",
-    "spot": 373.8,
-    "timestamp": "2026-09-25",
+    "spot": 357.45,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 380.0,
-      "mid_high": 377.5,
+      "ceiling": 377.5,
+      "mid_high": 376.25,
       "pivot": 375.0,
-      "mid_low": 372.5,
-      "floor": 370.0,
-      "oi_calls": 451329,
-      "oi_puts": 443520
+      "mid_low": 365.0,
+      "floor": 355.0,
+      "oi_calls": 310336,
+      "oi_puts": 300187
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - TSLA\", overlay=true)\nhline(380.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(377.5, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(375.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(372.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(370.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - TSLA\", overlay=true)\nhline(377.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(376.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(375.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(365.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(355.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "AMZN",
-    "spot": 249.78,
-    "timestamp": "2026-09-25",
+    "spot": 246.15,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 255.0,
-      "mid_high": 251.25,
+      "ceiling": 250.0,
+      "mid_high": 248.75,
       "pivot": 247.5,
-      "mid_low": 246.25,
-      "floor": 245.0,
-      "oi_calls": 275137,
-      "oi_puts": 150025
+      "mid_low": 243.75,
+      "floor": 240.0,
+      "oi_calls": 171137,
+      "oi_puts": 95646
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - AMZN\", overlay=true)\nhline(255.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(251.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(247.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(246.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(245.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - AMZN\", overlay=true)\nhline(250.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(248.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(247.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(243.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(240.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "META",
-    "spot": 751.18,
-    "timestamp": "2026-09-25",
+    "spot": 715.62,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 800.0,
-      "mid_high": 785.0,
-      "pivot": 770.0,
-      "mid_low": 758.75,
-      "floor": 747.5,
-      "oi_calls": 316674,
-      "oi_puts": 276321
+      "ceiling": 745.0,
+      "mid_high": 738.75,
+      "pivot": 732.5,
+      "mid_low": 723.75,
+      "floor": 715.0,
+      "oi_calls": 183754,
+      "oi_puts": 149042
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - META\", overlay=true)\nhline(800.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(785.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(770.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(758.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(747.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - META\", overlay=true)\nhline(745.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(738.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(732.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(723.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(715.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "GOOGL",
-    "spot": 344.06,
-    "timestamp": "2026-09-25",
+    "spot": 342.75,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 345.0,
-      "mid_high": 341.25,
-      "pivot": 337.5,
-      "mid_low": 336.25,
+      "ceiling": 350.0,
+      "mid_high": 345.0,
+      "pivot": 340.0,
+      "mid_low": 337.5,
       "floor": 335.0,
-      "oi_calls": 268544,
-      "oi_puts": 121729
+      "oi_calls": 197591,
+      "oi_puts": 74067
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - GOOGL\", overlay=true)\nhline(345.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(341.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(337.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(336.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(335.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - GOOGL\", overlay=true)\nhline(350.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(345.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(340.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(337.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(335.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "SOFI",
-    "spot": 16.69,
-    "timestamp": "2026-09-25",
+    "spot": 15.93,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 17.5,
-      "mid_high": 17.25,
+      "ceiling": 19.0,
+      "mid_high": 18.0,
       "pivot": 17.0,
-      "mid_low": 16.75,
-      "floor": 16.5,
-      "oi_calls": 981040,
-      "oi_puts": 550081
+      "mid_low": 16.0,
+      "floor": 15.0,
+      "oi_calls": 832710,
+      "oi_puts": 481058
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - SOFI\", overlay=true)\nhline(17.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(17.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(17.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(16.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(16.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - SOFI\", overlay=true)\nhline(19.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(18.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(17.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(16.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(15.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "AMD",
-    "spot": 629.57,
-    "timestamp": "2026-09-25",
+    "spot": 607.87,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 630.0,
-      "mid_high": 623.75,
-      "pivot": 617.5,
-      "mid_low": 612.5,
+      "ceiling": 637.5,
+      "mid_high": 630.0,
+      "pivot": 622.5,
+      "mid_low": 615.0,
       "floor": 607.5,
-      "oi_calls": 408189,
-      "oi_puts": 470372
+      "oi_calls": 321244,
+      "oi_puts": 365768
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - AMD\", overlay=true)\nhline(630.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(623.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(617.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(612.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(607.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - AMD\", overlay=true)\nhline(637.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(630.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(622.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(615.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(607.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "NFLX",
-    "spot": 71.1,
-    "timestamp": "2026-09-25",
+    "spot": 69.23,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 73.0,
-      "mid_high": 72.5,
-      "pivot": 72.0,
-      "mid_low": 71.5,
-      "floor": 71.0,
-      "oi_calls": 943048,
-      "oi_puts": 770289
+      "ceiling": 72.0,
+      "mid_high": 69.0,
+      "pivot": 66.0,
+      "mid_low": 65.5,
+      "floor": 65.0,
+      "oi_calls": 857742,
+      "oi_puts": 730243
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - NFLX\", overlay=true)\nhline(73.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(72.5, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(72.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(71.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(71.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - NFLX\", overlay=true)\nhline(72.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(69.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(66.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(65.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(65.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "COIN",
-    "spot": 194.62,
-    "timestamp": "2026-09-25",
+    "spot": 191.79,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 195.0,
-      "mid_high": 191.25,
-      "pivot": 187.5,
-      "mid_low": 187.5,
-      "floor": 187.5,
-      "oi_calls": 333046,
-      "oi_puts": 267703
+      "ceiling": 202.5,
+      "mid_high": 198.75,
+      "pivot": 195.0,
+      "mid_low": 192.5,
+      "floor": 190.0,
+      "oi_calls": 281202,
+      "oi_puts": 230266
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - COIN\", overlay=true)\nhline(195.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(191.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(187.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(187.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(187.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - COIN\", overlay=true)\nhline(202.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(198.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(195.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(192.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(190.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "PLTR",
-    "spot": 191.77,
-    "timestamp": "2026-09-25",
+    "spot": 187.48,
+    "timestamp": "2026-09-28",
     "niveles": {
       "ceiling": 200.0,
-      "mid_high": 188.75,
-      "pivot": 177.5,
-      "mid_low": 175.0,
-      "floor": 172.5,
-      "oi_calls": 797295,
-      "oi_puts": 765962
+      "mid_high": 193.75,
+      "pivot": 187.5,
+      "mid_low": 185.0,
+      "floor": 182.5,
+      "oi_calls": 687557,
+      "oi_puts": 692252
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - PLTR\", overlay=true)\nhline(200.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(188.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(177.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(175.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(172.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - PLTR\", overlay=true)\nhline(200.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(193.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(187.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(185.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(182.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "MSTR",
-    "spot": 159.06,
-    "timestamp": "2026-09-25",
+    "spot": 157.14,
+    "timestamp": "2026-09-28",
     "niveles": {
-      "ceiling": 167.5,
-      "mid_high": 166.25,
-      "pivot": 165.0,
-      "mid_low": 161.25,
-      "floor": 157.5,
-      "oi_calls": 865396,
-      "oi_puts": 782081
+      "ceiling": 165.0,
+      "mid_high": 161.25,
+      "pivot": 157.5,
+      "mid_low": 153.75,
+      "floor": 150.0,
+      "oi_calls": 713558,
+      "oi_puts": 629901
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - MSTR\", overlay=true)\nhline(167.5,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(166.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(165.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(161.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(157.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - MSTR\", overlay=true)\nhline(165.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(161.25, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(157.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(153.75,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(150.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   },
   {
     "ticker": "HOOD",
-    "spot": 119.4,
-    "timestamp": "2026-09-25",
+    "spot": 116.46,
+    "timestamp": "2026-09-28",
+    "niveles": {
+      "ceiling": 120.0,
+      "mid_high": 115.0,
+      "pivot": 110.0,
+      "mid_low": 105.0,
+      "floor": 100.0,
+      "oi_calls": 452096,
+      "oi_puts": 335211
+    },
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - HOOD\", overlay=true)\nhline(120.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(115.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(110.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(105.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(100.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+  },
+  {
+    "ticker": "UBER",
+    "spot": 68.16,
+    "timestamp": "2026-09-28",
+    "niveles": {
+      "ceiling": 75.0,
+      "mid_high": 72.0,
+      "pivot": 69.0,
+      "mid_low": 67.0,
+      "floor": 65.0,
+      "oi_calls": 295903,
+      "oi_puts": 249262
+    },
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - UBER\", overlay=true)\nhline(75.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(72.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(69.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(67.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(65.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+  },
+  {
+    "ticker": "SHOP",
+    "spot": 144.01,
+    "timestamp": "2026-09-28",
+    "niveles": {
+      "ceiling": 145.0,
+      "mid_high": 144.5,
+      "pivot": 144.0,
+      "mid_low": 141.0,
+      "floor": 138.0,
+      "oi_calls": 198931,
+      "oi_puts": 138266
+    },
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - SHOP\", overlay=true)\nhline(145.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(144.5, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(144.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(141.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(138.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+  },
+  {
+    "ticker": "RBLX",
+    "spot": 41.86,
+    "timestamp": "2026-09-28",
+    "niveles": {
+      "ceiling": 50.0,
+      "mid_high": 44.75,
+      "pivot": 39.5,
+      "mid_low": 37.25,
+      "floor": 35.0,
+      "oi_calls": 110023,
+      "oi_puts": 81591
+    },
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - RBLX\", overlay=true)\nhline(50.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(44.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(39.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(37.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(35.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+  },
+  {
+    "ticker": "SNAP",
+    "spot": 5.22,
+    "timestamp": "2026-09-28",
+    "niveles": {
+      "ceiling": 6.0,
+      "mid_high": 5.75,
+      "pivot": 5.5,
+      "mid_low": 5.25,
+      "floor": 5.0,
+      "oi_calls": 205874,
+      "oi_puts": 78831
+    },
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - SNAP\", overlay=true)\nhline(6.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(5.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(5.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(5.25,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(5.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+  },
+  {
+    "ticker": "BABA",
+    "spot": 108.76,
+    "timestamp": "2026-09-28",
     "niveles": {
       "ceiling": 120.0,
       "mid_high": 119.5,
       "pivot": 119.0,
-      "mid_low": 118.5,
-      "floor": 118.0,
-      "oi_calls": 541782,
-      "oi_puts": 396041
+      "mid_low": 112.0,
+      "floor": 105.0,
+      "oi_calls": 713565,
+      "oi_puts": 308034
     },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - HOOD\", overlay=true)\nhline(120.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(119.5, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(119.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(118.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(118.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
-  },
-  {
-    "ticker": "UBER",
-    "spot": 69.23,
-    "timestamp": "2026-09-25",
-    "niveles": {
-      "ceiling": 70.0,
-      "mid_high": 70.0,
-      "pivot": 70.0,
-      "mid_low": 69.5,
-      "floor": 69.0,
-      "oi_calls": 339838,
-      "oi_puts": 251086
-    },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - UBER\", overlay=true)\nhline(70.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(70.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(70.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(69.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(69.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
-  },
-  {
-    "ticker": "SHOP",
-    "spot": 142.61,
-    "timestamp": "2026-09-25",
-    "niveles": {
-      "ceiling": 145.0,
-      "mid_high": 138.0,
-      "pivot": 131.0,
-      "mid_low": 130.5,
-      "floor": 130.0,
-      "oi_calls": 246403,
-      "oi_puts": 157030
-    },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - SHOP\", overlay=true)\nhline(145.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(138.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(131.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(130.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(130.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
-  },
-  {
-    "ticker": "RBLX",
-    "spot": 46.84,
-    "timestamp": "2026-09-25",
-    "niveles": {
-      "ceiling": 47.0,
-      "mid_high": 46.75,
-      "pivot": 46.5,
-      "mid_low": 46.5,
-      "floor": 46.5,
-      "oi_calls": 124978,
-      "oi_puts": 84010
-    },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - RBLX\", overlay=true)\nhline(47.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(46.75, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(46.5,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(46.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(46.5,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
-  },
-  {
-    "ticker": "SNAP",
-    "spot": 5.43,
-    "timestamp": "2026-09-25",
-    "niveles": {
-      "ceiling": 6.0,
-      "mid_high": 5.5,
-      "pivot": 5.0,
-      "mid_low": 5.0,
-      "floor": 5.0,
-      "oi_calls": 253246,
-      "oi_puts": 89475
-    },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - SNAP\", overlay=true)\nhline(6.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(5.5, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(5.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(5.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(5.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
-  },
-  {
-    "ticker": "BABA",
-    "spot": 109.96,
-    "timestamp": "2026-09-25",
-    "niveles": {
-      "ceiling": 120.0,
-      "mid_high": 119.0,
-      "pivot": 118.0,
-      "mid_low": 113.5,
-      "floor": 109.0,
-      "oi_calls": 788902,
-      "oi_puts": 334050
-    },
-    "pine_script": "//@version=5\nindicator(\"GEX Levels - BABA\", overlay=true)\nhline(120.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(119.0, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(118.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(113.5,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(109.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
+    "pine_script": "//@version=5\nindicator(\"GEX Levels - BABA\", overlay=true)\nhline(120.0,  \"Ceiling\",  color.new(color.green,  0), linewidth=2)\nhline(119.5, \"Mid High\", color.new(color.yellow, 0), linewidth=1)\nhline(119.0,    \"Pivot\",    color.new(color.white,  0), linewidth=2)\nhline(112.0,  \"Mid Low\",  color.new(color.yellow, 0), linewidth=1)\nhline(105.0,    \"Floor\",    color.new(color.red,    0), linewidth=2)"
   }
 ]
